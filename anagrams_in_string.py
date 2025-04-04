@@ -1,16 +1,14 @@
-'''
+"""
 Input:строка s и p
 Output: список из начальных индексов анаграмм p в s
-'''
+"""
 
 
-def longest_substring(s, p):
-
-
+def anagrams_in_string(s: str, p: str) -> list:
     result = []
     p_list = []
-    for l in p:
-        p_list.append(l)
+    for m in p:
+        p_list.append(m)
     p_list.sort()
 
     for i in range(len(s) - len(p) + 1):  # 0:7
@@ -21,6 +19,7 @@ def longest_substring(s, p):
         r.sort()
         if r == p_list:
             result.append(i)
-    print(result)
+    return result
 
-longest_substring("cbaebabacd", "abc")
+
+print(anagrams_in_string("cbaebabacd", "abc"))
