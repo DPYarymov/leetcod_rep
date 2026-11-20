@@ -50,3 +50,4 @@ def rremoveElement(nums: list[int], val: int) -> int:
 
 removeElement([2, 5, 5, 6, 7, 5, 1], 5)
 rremoveElement([2, 5, 5, 6, 7, 5, 1], 5)
+
