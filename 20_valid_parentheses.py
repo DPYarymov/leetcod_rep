@@ -8,8 +8,8 @@ Every close bracket has a corresponding open bracket of the same type.
 
 
 def isValid(s: str) -> bool:
-    stack = []
     mapping = {')': '(', ']': '[', '}': '{'}
+    stack = []
     for ch in s:
         if ch in mapping:
             if not stack or stack.pop() != mapping[ch]:
